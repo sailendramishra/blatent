@@ -1,3 +1,16 @@
+#' @title Simulates data using parameters from posterior distribution of blatent Markov chain
+#'
+#' @description Simulates data using parameters from posterior distribution of blatent Markov chain.
+#'
+#' @param model A blatent MCMC model object.
+#'
+#' @param nSamples The number of PPMC samples to be simulated.
+#'
+#' @param seed The random number seed. Defaults to the seed set in the blatent model object.
+#'
+#' @param type The type of statistic to generate. Defaults to c("covariance", "bivariate"), which produces covariances
+#'             and bivariate Chi-Square statistics. Not all of these may be good for model fit.
+#'
 #' @export
 blatentPPMC = function(model, nSamples, seed = model$options$seed, type = c("covariance", "bivariate")){
 
