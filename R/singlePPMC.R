@@ -1,5 +1,5 @@
 singlePPMC = function(num, model, fullPosterior, estimableCovariances, type){
-
+  print(num)
   # draw sample at random from posterior
   postDraw = sample(size = 1, x = 1:nrow(fullPosterior$variables))
 
