@@ -9,10 +9,10 @@ blatentControl(defaultPriors = setDefaultPriors(),
   defaultPosteriorPredictiveChecks = setDefaultPosteriorPredictiveChecks(),
   estimator = "GPDCM", estimatorType = "external",
   estimatorLocation = "/Users/jonathantemplin/Documents/repos/blatent-main/gpdcm/",
-  fileSaveLocation = paste0(getwd(), "/"), maxTuneChains = 0,
-  minTuneChains = 0, nBurnin = 1000, nChains = 4, nCores = -1,
-  nSampled = 1000, nThin = 5, nTuneIterations = 0,
-  parallel = FALSE, seed = NULL)
+  executableName = "GPDCMRunning", fileSaveLocation = paste0(getwd(),
+  "/"), maxTuneChains = 0, minTuneChains = 0, nBurnin = 1000,
+  nChains = 4, nCores = -1, nSampled = 1000, nThin = 5,
+  nTuneIterations = 0, parallel = FALSE, seed = NULL)
 }
 \arguments{
 \item{defaultPriors}{Sets priors for all parameters that are not specified in priorsList of
@@ -52,6 +52,9 @@ external to R) is allowed, which is the default value.}
 
 \item{estimatorLocation}{Sets the path to the location of estimator executable, if \code{estimatorType} is
 \code{"external"}. Currently set to only location available.}
+
+\item{executableName}{Sets the name for the executable file for the estimator. Defaults to
+\code{"GPDCMRunning"}}
 
 \item{fileSaveLocation}{Sets the path for output files used for exteneral estimation routines.
 Only used when \code{estimatorType = "external"}.}

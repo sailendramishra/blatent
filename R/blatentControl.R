@@ -39,6 +39,8 @@
 #' @param estimatorType Sets location of estimator. Currently, only \code{"external"} (for estimation routines
 #'                      external to R) is allowed, which is the default value.
 #'
+#' @param executableName Sets the name for the executable file for the estimator. Defaults to
+#'                       \code{"GPDCMRunning"}
 #'
 #' @param fileSaveLocation Sets the path for output files used for exteneral estimation routines.
 #'                         Only used when \code{estimatorType = "external"}.
@@ -87,6 +89,7 @@ blatentControl <-
            estimator = "GPDCM",
            estimatorType = "external",
            estimatorLocation = "/Users/jonathantemplin/Documents/repos/blatent-main/gpdcm/",
+           executableName = "GPDCMRunning",
            fileSaveLocation = paste0(getwd(), "/"),
            maxTuneChains = 0,
            minTuneChains = 0,
@@ -107,6 +110,7 @@ blatentControl <-
         estimatorType = estimatorType,
         estimatorLocation = estimatorLocation,
         fileSaveLocation = fileSaveLocation,
+        executableName = executableName,
         maxTuneChains = maxTuneChains,
         minTuneChains = minTuneChains,
         nBurnin = nBurnin,
